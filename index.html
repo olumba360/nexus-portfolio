@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus | Custom Telegram & WhatsApp Automation</title>
+    <meta name="description" content="Custom bot development for Telegram and WhatsApp. Automation solutions that save time and grow your business.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <i class="fas fa-robot"></i>
+                <span>Nexus</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#bots">Bots</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact" class="btn-primary">Get Started</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-bolt"></i>
+                    <span>Now Available: WhatsApp-Telegram Controller</span>
+                </div>
+                <h1 class="hero-title">
+                    Automate Your <span class="gradient-text">Messaging</span><br>
+                    Grow Your Business
+                </h1>
+                <p class="hero-description">
+                    Custom Telegram and WhatsApp bots that work 24/7. From auto-reply systems
+                    to full business automation, I build solutions that save you time and money.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#bots" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i>
+                        View My Bots
+                    </a>
+                    <a href="#contact" class="btn btn-outline btn-large">
+                        <i class="fas fa-comment"></i>
+                        Custom Request
+                    </a>
+                </div>
+
+                <div class="quick-contact">
+                    <a href="https://wa.me/2347089823067" target="_blank" class="quick-contact-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        Chat on WhatsApp
+                    </a>
+                    <a href="https://t.me/kevinnduka" target="_blank" class="quick-contact-btn telegram">
+                        <i class="fab fa-telegram"></i>
+                        Message on Telegram
+                    </a>
+                    <a href="sms:+2347089823067" class="quick-contact-btn sms">
+                        <i class="fas fa-sms"></i>
+                        Send SMS
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Bots Delivered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                        <span class="code-title">bot.py</span>
+                    </div>
+                    <div class="code-content">
+                        <pre><code><span class="code-keyword">from</span> telegram <span class="code-keyword">import</span> Bot
+<span class="code-keyword">import</span> automation
+
+bot = Bot(token=<span class="code-string">"YOUR_BOT"</span>)
+
+<span class="code-comment"># 24/7 Auto-reply</span>
+<span class="code-decorator">@bot.message_handler</span>
+<span class="code-keyword">def</span> <span class="code-function">auto_respond</span>(msg):
+    bot.send_message(
+        chat_id=msg.chat.id,
+        text=<span class="code-string">"Hello! How can I help?"</span>
+    )</code></pre>
+                    </div>
+                </div>
+                <div class="floating-card card-1">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Message Sent!</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-cog fa-spin"></i>
+                    <span>Bot Running...</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+    </section>
+
+    <!-- Clients/Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <p class="proof-text">Trusted by businesses and individuals worldwide</p>
+            <div class="proof-icons">
+                <div class="proof-item"><i class="fab fa-telegram"></i> Telegram</div>
+                <div class="proof-item"><i class="fab fa-whatsapp"></i> WhatsApp</div>
+                <div class="proof-item"><i class="fab fa-python"></i> Python</div>
+                <div class="proof-item"><i class="fas fa-cloud"></i> Cloud</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Do</span>
+                <h2 class="section-title">Bot Development Services</h2>
+                <p class="section-description">
+                    From simple auto-reply bots to complex automation systems,
+                    I deliver solutions tailored to your needs.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3>Telegram Bots</h3>
+                    <p>Custom bots with inline keyboards, payment integration,
+                    admin panels, and advanced automation features.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Auto-reply systems</li>
+                        <li><i class="fas fa-check"></i> Group management</li>
+                        <li><i class="fas fa-check"></i> Payment bots</li>
+                        <li><i class="fas fa-check"></i> Broadcasting</li>
+                    </ul>
+                </div>
+                <div class="service-card featured">
+                    <div class="featured-badge">Popular</div>
+                    <div class="service-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp Automation</h3>
+                    <p>Connect WhatsApp with Telegram or automate messaging
+                    using official APIs and third-party services.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> WhatsApp-Telegram bridge</li>
+                        <li><i class="fas fa-check"></i> Message scheduling</li>
+                        <li><i class="fas fa-check"></i> Auto-responses</li>
+                        <li><i class="fas fa-check"></i> Bulk messaging</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Custom Automation</h3>
+                    <p>Unique automation solutions for your specific workflow.
+                    API integrations, web scraping, and more.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> API integrations</li>
+                        <li><i class="fas fa-check"></i> Data scraping</li>
+                        <li><i class="fas fa-check"></i> Workflow automation</li>
+                        <li><i class="fas fa-check"></i> Custom commands</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Bots -->
+    <section id="bots" class="bots">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Ready to Use</span>
+                <h2 class="section-title">Featured Bots</h2>
+                <p class="section-description">
+                    Pre-built bots available for immediate deployment.
+                    Customizable to match your brand.
+                </p>
+            </div>
+            <div class="bots-grid">
+                <div class="bot-card">
+                    <div class="bot-image">
+                        <div class="bot-placeholder whatsapp-controller">
+                            <i class="fab fa-whatsapp"></i>
+                            <i class="fas fa-exchange-alt"></i>
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                    </div>
+                    <div class="bot-content">
+                        <div class="bot-tags">
+                            <span class="tag">WhatsApp</span>
+                            <span class="tag">Telegram</span>
+                            <span class="tag hot">Hot</span>
+                        </div>
+                        <h3>WhatsApp-Telegram Controller</h3>
+                        <p>Control WhatsApp messaging from Telegram. Send messages,
+                        manage contacts, and automate responses from one interface.</p>
+                        <div class="bot-features">
+                            <span><i class="fas fa-check"></i> Interactive Menu</span>
+                            <span><i class="fas fa-check"></i> Statistics Tracking</span>
+                            <span><i class="fas fa-check"></i> Auto-Reply</span>
+                            <span><i class="fas fa-check"></i> Message History</span>
+                        </div>
+                        <div class="bot-footer">
+                            <span class="bot-price">$49</span>
+                            <button class="btn btn-primary" onclick="showContact('WhatsApp-Telegram Controller')">
+                                Get This Bot
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bot-card">
+                    <div class="bot-image">
+                        <div class="bot-placeholder group-manager">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="bot-content">
+                        <div class="bot-tags">
+                            <span class="tag">Telegram</span>
+                            <span class="tag">Management</span>
+                        </div>
+                        <h3>Group Manager Pro</h3>
+                        <p>Complete Telegram group management with anti-spam,
+                        welcome messages, auto-delete, and admin tools.</p>
+                        <div class="bot-features">
+                            <span><i class="fas fa-check"></i> Anti-Spam</span>
+                            <span><i class="fas fa-check"></i> Welcome Messages</span>
+                            <span><i class="fas fa-check"></i> Auto-Moderation</span>
+                            <span><i class="fas fa-check"></i> Analytics</span>
+                        </div>
+                        <div class="bot-footer">
+                            <span class="bot-price">$39</span>
+                            <button class="btn btn-primary" onclick="showContact('Group Manager Pro')">
+                                Get This Bot
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bot-card">
+                    <div class="bot-image">
+                        <div class="bot-placeholder payment-bot">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                    </div>
+                    <div class="bot-content">
+                        <div class="bot-tags">
+                            <span class="tag">Payments</span>
+                            <span class="tag">E-Commerce</span>
+                        </div>
+                        <h3>Shop Bot</h3>
+                        <p>Complete e-commerce solution for Telegram. Product catalog,
+                        shopping cart, payment integration, and order management.</p>
+                        <div class="bot-features">
+                            <span><i class="fas fa-check"></i> Product Catalog</span>
+                            <span><i class="fas fa-check"></i> Multiple Payments</span>
+                            <span><i class="fas fa-check"></i> Order Tracking</span>
+                            <span><i class="fas fa-check"></i> Admin Dashboard</span>
+                        </div>
+                        <div class="bot-footer">
+                            <span class="bot-price">$79</span>
+                            <button class="btn btn-primary" onclick="showContact('Shop Bot')">
+                                Get This Bot
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bot-card">
+                    <div class="bot-image">
+                        <div class="bot-placeholder promoter">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                    </div>
+                    <div class="bot-content">
+                        <div class="bot-tags">
+                            <span class="tag">Marketing</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                        <h3>Auto Promoter</h3>
+                        <p>Automated marketing bot for Telegram. Join groups,
+                        broadcast messages, and grow your audience on autopilot.</p>
+                        <div class="bot-features">
+                            <span><i class="fas fa-check"></i> Group Joining</span>
+                            <span><i class="fas fa-check"></i> Broadcasting</span>
+                            <span><i class="fas fa-check"></i> User Targeting</span>
+                            <span><i class="fas fa-check"></i> Campaign Stats</span>
+                        </div>
+                        <div class="bot-footer">
+                            <span class="bot-price">$59</span>
+                            <button class="btn btn-primary" onclick="showContact('Auto Promoter')">
+                                Get This Bot
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pricing</span>
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-description">
+                    Choose the plan that fits your needs. All plans include source code and setup assistance.
+                </p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic Bot</h3>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">29</span>
+                        <span class="period">one-time</span>
+                    </div>
+                    <p class="pricing-desc">Simple automation for personal use</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Single function bot</li>
+                        <li><i class="fas fa-check"></i> Source code included</li>
+                        <li><i class="fas fa-check"></i> Basic commands</li>
+                        <li><i class="fas fa-check"></i> Email support</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Custom features</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Priority support</li>
+                    </ul>
+                    <button class="btn btn-outline btn-block" onclick="showContact('Basic Plan')">Get Started</button>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Pro Bot</h3>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">59</span>
+                        <span class="period">one-time</span>
+                    </div>
+                    <p class="pricing-desc">Advanced features for businesses</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Multi-function bot</li>
+                        <li><i class="fas fa-check"></i> Source code included</li>
+                        <li><i class="fas fa-check"></i> Database integration</li>
+                        <li><i class="fas fa-check"></i> Admin dashboard</li>
+                        <li><i class="fas fa-check"></i> 1 custom feature</li>
+                        <li><i class="fas fa-check"></i> Priority support (7 days)</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" onclick="showContact('Pro Plan')">Get Started</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="pricing-price">
+                        <span class="currency">$</span>
+                        <span class="amount">149</span>
+                        <span class="period">one-time</span>
+                    </div>
+                    <p class="pricing-desc">Complete custom solution</p>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Fully custom bot</li>
+                        <li><i class="fas fa-check"></i> Source code included</li>
+                        <li><i class="fas fa-check"></i> Multiple integrations</li>
+                        <li><i class="fas fa-check"></i> Web dashboard</li>
+                        <li><i class="fas fa-check"></i> Unlimited features</li>
+                        <li><i class="fas fa-check"></i> Priority support (30 days)</li>
+                    </ul>
+                    <button class="btn btn-outline btn-block" onclick="showContact('Enterprise Plan')">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">How It Works</span>
+                <h2 class="section-title">Simple 3-Step Process</h2>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Discuss</h3>
+                    <p>Tell me about your needs and requirements. We'll define the scope and features.</p>
+                </div>
+                <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon"><i class="fas fa-code"></i></div>
+                    <h3>Develop</h3>
+                    <p>I build your bot with regular updates. You'll see progress and can request changes.</p>
+                </div>
+                <div class="step-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>Deploy</h3>
+                    <p>Your bot goes live! I help with setup and provide documentation for easy management.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="section-tag">About Me</span>
+                    <h2>Bot Developer & Automation Expert</h2>
+                    <p>
+                        I specialize in building Telegram and WhatsApp bots that automate tasks,
+                        save time, and help businesses grow. With over 50+ bots delivered,
+                        I understand what works and what doesn't.
+                    </p>
+                    <p>
+                        Whether you need a simple auto-reply bot or a complex automation system,
+                        I deliver clean, documented code that you can easily manage and scale.
+                    </p>
+                    <div class="about-skills">
+                        <span class="skill">Python</span>
+                        <span class="skill">Telegram API</span>
+                        <span class="skill">WhatsApp API</span>
+                        <span class="skill">Webhooks</span>
+                        <span class="skill">Databases</span>
+                        <span class="skill">Cloud Deploy</span>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="about-card">
+                        <i class="fas fa-robot"></i>
+                        <span class="about-number">50+</span>
+                        <span class="about-label">Bots Built</span>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-users"></i>
+                        <span class="about-number">30+</span>
+                        <span class="about-label">Happy Clients</span>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-clock"></i>
+                        <span class="about-number">2+</span>
+                        <span class="about-label">Years Experience</span>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-headset"></i>
+                        <span class="about-number">24/7</span>
+                        <span class="about-label">Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimonials</span>
+                <h2 class="section-title">What Clients Say</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The WhatsApp-Telegram bot is exactly what I needed. Now I can manage
+                        all my messages from one place. Setup was super easy!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <span class="author-name">John D.</span>
+                            <span class="author-role">Business Owner</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Delivered my custom bot in 3 days with all the features I requested.
+                        The code is clean and well-documented. Highly recommend!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <span class="author-name">Sarah M.</span>
+                            <span class="author-role">Digital Marketer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Great communication throughout the project. The bot works perfectly
+                        and has already saved me hours of manual work every week."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <span class="author-name">Mike K.</span>
+                            <span class="author-role">E-commerce Seller</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag">Contact</span>
+                    <h2>Let's Build Your Bot</h2>
+                    <p>
+                        Ready to automate your workflow? Send me a message and
+                        I'll get back to you within 24 hours.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="https://t.me/kevinnduka" target="_blank" class="contact-method-link">
+                            <div class="contact-method">
+                                <i class="fab fa-telegram"></i>
+                                <div>
+                                    <span class="method-label">Telegram</span>
+                                    <span class="method-value">@kevinnduka</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="mailto:kevinnduka991@gmail.com" class="contact-method-link">
+                            <div class="contact-method">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <span class="method-label">Email</span>
+                                    <span class="method-value">kevinnduka991@gmail.com</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/2347089823067" target="_blank" class="contact-method-link">
+                            <div class="contact-method">
+                                <i class="fab fa-whatsapp"></i>
+                                <div>
+                                    <span class="method-label">WhatsApp</span>
+                                    <span class="method-value">+234 708 982 3067</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="sms:+2347089823067" class="contact-method-link">
+                            <div class="contact-method">
+                                <i class="fas fa-sms"></i>
+                                <div>
+                                    <span class="method-label">SMS</span>
+                                    <span class="method-value">+234 708 982 3067</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email or Telegram</label>
+                            <input type="text" id="email" name="email" placeholder="@username or email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="botType">I'm interested in</label>
+                            <select id="botType" name="botType" required>
+                                <option value="">Select an option...</option>
+                                <option value="whatsapp-telegram">WhatsApp-Telegram Controller</option>
+                                <option value="group-manager">Group Manager Pro</option>
+                                <option value="shop-bot">Shop Bot</option>
+                                <option value="auto-promoter">Auto Promoter</option>
+                                <option value="custom">Custom Bot</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell me about your project</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Describe what you need..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <i class="fas fa-robot"></i>
+                        <span>Nexus</span>
+                    </a>
+                    <p>Custom bot development for Telegram and WhatsApp.
+                    Automate your workflow and grow your business.</p>
+                    <div class="social-links">
+                        <a href="https://t.me/kevinnduka" target="_blank"><i class="fab fa-telegram"></i></a>
+                        <a href="https://wa.me/2347089823067" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:kevinnduka991@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="sms:+2347089823067"><i class="fas fa-sms"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Telegram Bots</a></li>
+                        <li><a href="#services">WhatsApp Automation</a></li>
+                        <li><a href="#services">Custom Development</a></li>
+                        <li><a href="#services">Bot Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Bots</h4>
+                    <ul>
+                        <li><a href="#bots">WhatsApp Controller</a></li>
+                        <li><a href="#bots">Group Manager</a></li>
+                        <li><a href="#bots">Shop Bot</a></li>
+                        <li><a href="#bots">Auto Promoter</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nexus. All rights reserved.</p>
+                <p>Made with <i class="fas fa-heart"></i> for bot enthusiasts</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Message sent!</span>
+    </div>
+
+    <!-- Visitor Counter Widget (Visible to Admin Only via Secret Key) -->
+    <div class="visitor-counter" id="visitorCounter" style="display: none;">
+        <div class="counter-box">
+            <i class="fas fa-eye"></i>
+            <span>Visitors Today: <strong id="todayCount">0</strong></span>
+            <span>| Total: <strong id="totalCount">0</strong></span>
+            <button onclick="hideCounter()" class="close-counter">&times;</button>
+        </div>
+    </div>
+
+    <!-- Admin Panel Toggle (Hidden) -->
+    <div class="admin-trigger" onclick="checkAdminKey()" title="Admin Panel"></div>
+
+    <!-- EmailJS for Email Notifications -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        // Initialize EmailJS with your public key
+        // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+        (function() {
+            emailjs.init("ATMUeZDdNolOaYx_M");
+        })();
+    </script>
+
+    <script src="script.js"></script>
+    <script>
+        // ============================================
+        // NEXUS BOT PORTFOLIO - ANALYTICS & NOTIFICATIONS
+        // ============================================
+
+        // Visitor Tracking
+        (function trackVisitors() {
+            const today = new Date().toDateString();
+            const storageKey = 'nexus_visitor_' + today;
+            const totalKey = 'nexus_total_visitors';
+
+            // Check if this is a new session (page load)
+            if (!sessionStorage.getItem('nexus_session')) {
+                sessionStorage.setItem('nexus_session', 'active');
+
+                // Increment today's count
+                let todayCount = parseInt(localStorage.getItem(storageKey) || '0');
+                todayCount++;
+                localStorage.setItem(storageKey, todayCount);
+
+                // Increment total count
+                let totalCount = parseInt(localStorage.getItem(totalKey) || '0');
+                totalCount++;
+                localStorage.setItem(totalKey, totalCount);
+
+                // Update display
+                document.getElementById('todayCount').textContent = todayCount;
+                document.getElementById('totalCount').textContent = totalCount;
+
+                // Send notification (simulated - requires backend for real SMS/Email)
+                sendVisitNotification(todayCount, totalCount);
+            } else {
+                // Just display counts
+                document.getElementById('todayCount').textContent = localStorage.getItem(storageKey) || '0';
+                document.getElementById('totalCount').textContent = localStorage.getItem(totalKey) || '0';
+            }
+        })();
+
+        // Simulate sending notification (In production, use backend API)
+        function sendVisitNotification(today, total) {
+            const notificationData = {
+                type: 'visitor',
+                message: `New visitor on Nexus portfolio! Today: ${today}, Total: ${total}`,
+                timestamp: new Date().toISOString(),
+                userAgent: navigator.userAgent,
+                referrer: document.referrer || 'Direct'
+            };
+
+            // Store in localStorage for admin review
+            const notifications = JSON.parse(localStorage.getItem('nexus_notifications') || '[]');
+            notifications.push(notificationData);
+            localStorage.setItem('nexus_notifications', JSON.stringify(notifications));
+
+            // Log to console (in production, send to your backend)
+            console.log('📊 Visitor Notification:', notificationData);
+
+            // Optional: Send to Telegram Bot (requires bot token setup)
+            // notifyTelegram(notificationData.message);
+        }
+
+        // Admin Panel Functions
+        function checkAdminKey() {
+            const key = prompt('Enter admin key:');
+            if (key === 'nexus2024') {
+                document.getElementById('visitorCounter').style.display = 'block';
+                showToast('Admin panel unlocked!');
+            } else if (key) {
+                showToast('Invalid key!');
+            }
+        }
+
+        function hideCounter() {
+            document.getElementById('visitorCounter').style.display = 'none';
+        }
+
+        // Contact Form with Notifications
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+
+            // Store contact request
+            const contacts = JSON.parse(localStorage.getItem('nexus_contacts') || '[]');
+            contacts.push({
+                ...data,
+                timestamp: new Date().toISOString(),
+                id: Date.now()
+            });
+            localStorage.setItem('nexus_contacts', JSON.stringify(contacts));
+
+            // Prepare notification message
+            const notificationMsg = `📩 NEW CONTACT REQUEST - NEXUS
+
+Name: ${data.name}
+Contact: ${data.email}
+Bot Interest: ${data.botType}
+Message: ${data.message}
+
+Time: ${new Date().toLocaleString()}
+            `.trim();
+
+            // Send Email Notification via EmailJS
+            // Replace these with your actual EmailJS credentials
+            const EMAILJS_SERVICE_ID = 'service_ylqfyoh';     // e.g., 'service_abc123'
+            const EMAILJS_TEMPLATE_ID = 'template_rx37r2c';   // e.g., 'template_xyz789'
+
+            // Only send if credentials are configured
+            if (EMAILJS_SERVICE_ID !== 'YOUR_SERVICE_ID' && EMAILJS_TEMPLATE_ID !== 'YOUR_TEMPLATE_ID') {
+                emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                    from_name: data.name,
+                    from_email: data.email,
+                    bot_type: data.botType,
+                    message: data.message,
+                    reply_to: data.email,
+                    to_email: 'kevinnduka991@gmail.com'
+                }).then(
+                    function(response) {
+                        console.log('Email sent successfully:', response);
+                        showToast('Message sent! Check your email for confirmation.');
+                    },
+                    function(error) {
+                        console.error('Email failed:', error);
+                        showToast('Message saved! I\'ll contact you soon.');
+                    }
+                );
+            } else {
+                // EmailJS not configured yet - show setup reminder
+                console.log('⚠️ EmailJS not configured. Set up instructions:');
+                console.log('1. Sign up at https://www.emailjs.com/');
+                console.log('2. Create service and template');
+                console.log('3. Update EMAILJS_SERVICE_ID and EMAILJS_TEMPLATE_ID');
+                showToast('Message received! I\'ll get back to you soon.');
+            }
+
+            // Also send WhatsApp notification to yourself (opens in new tab)
+            const whatsappMsg = `📩 New Nexus Contact%0A%0AName: ${data.name}%0AContact: ${data.email}%0ABot: ${data.botType}%0A%0AMessage: ${data.message.substring(0, 50)}...`;
+            const whatsappUrl = `https://wa.me/2347089823067?text=${whatsappMsg}`;
+
+            // Try to open WhatsApp notification (may be blocked by popup blockers)
+            setTimeout(() => {
+                window.open(whatsappUrl, '_blank');
+            }, 1000);
+
+            // Reset form
+            this.reset();
+        });
+
+        // REAL NOTIFICATION SETUP (To be implemented with backend)
+        // =====================================================
+
+        /*
+        FOR EMAIL NOTIFICATIONS (using EmailJS - FREE):
+        1. Sign up at https://www.emailjs.com/
+        2. Create email template
+        3. Add this to your HTML head:
+           <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        4. Initialize and send:
+
+        emailjs.init("YOUR_PUBLIC_KEY");
+        emailjs.send("service_id", "template_id", {
+            to_email: "kevinnduka991@gmail.com",
+            message: notificationMsg,
+            reply_to: data.email
+        });
+        */
+
+        /*
+        FOR SMS NOTIFICATIONS (using Twilio - PAID):
+        1. Sign up at https://www.twilio.com/
+        2. Get Account SID and Auth Token
+        3. Set up backend endpoint (Node.js/Python)
+        4. Send SMS to +2347089823067
+
+        // Backend code example (Node.js):
+        const twilio = require('twilio');
+        const client = new twilio(accountSid, authToken);
+
+        client.messages.create({
+            body: notificationMsg,
+            to: '+2347089823067',
+            from: 'YOUR_TWILIO_NUMBER'
+        });
+        */
+
+        /*
+        FOR TELEGRAM NOTIFICATIONS (FREE):
+        1. Create bot with @BotFather
+        2. Get your Chat ID
+        3. Send message via API:
+        */
+        function notifyTelegram(message) {
+            const botToken = 'YOUR_BOT_TOKEN'; // Replace with your bot token
+            const chatId = 'YOUR_CHAT_ID';     // Replace with your chat ID
+
+            if (botToken && chatId && botToken !== 'YOUR_BOT_TOKEN') {
+                fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        chat_id: chatId,
+                        text: message,
+                        parse_mode: 'HTML'
+                    })
+                });
+            }
+        }
+
+        // Console info
+        console.log('%c🤖 NEXUS BOT PORTFOLIO', 'font-size: 24px; font-weight: bold; color: #6366f1;');
+        console.log('%cVisitor tracking active', 'font-size: 12px; color: #94a3b8;');
+        console.log('%cAdmin Key: nexus2024', 'font-size: 12px; color: #22c55e;');
+        console.log('%cTo view analytics, click the hidden admin button in top-right corner', 'font-size: 11px; color: #64748b;');
+    </script>
+</body>
+</html>
